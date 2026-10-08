@@ -47,10 +47,10 @@ export default function RealtimeMonitorPage() {
           const t = THRESHOLDS[p];
           const dispVal = val !== null ? round(val, p === 'tds' ? 0 : p === 'turbidity' ? 0 : 2) : '—';
           return (
-            <div key={p} className="card" style={{ textAlign: 'center', padding: '1.5rem 1rem' }}>
+            <div key={p} className="card monitor-card" style={{ textAlign: 'center' }}>
               <div style={{ fontSize: '2rem', marginBottom: 8 }}>{ICONS[p]}</div>
               <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginBottom: 4, textTransform: 'uppercase', letterSpacing: '0.05em' }}>{t.label}</div>
-              <div style={{ fontSize: '2.5rem', fontWeight: 800, lineHeight: 1, color: 'var(--text-primary)', marginBottom: 4 }}>
+              <div className="monitor-value">
                 {loadingState === 'loading' ? <div className="shimmer" style={{ height: 40, width: 80, margin: '0 auto', borderRadius: 6 }} /> : dispVal}
               </div>
               <div style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: 12 }}>{t.unit}</div>

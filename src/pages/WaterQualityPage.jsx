@@ -140,7 +140,7 @@ export default function WaterQualityPage() {
       </div>
 
       {/* Parameter Summary */}
-      <div className="grid-4">
+      <div className="grid-adaptive">
         {PARAMS.map(p => {
           const vals = chartData.map(h => h[p]).filter(v => v !== null && !isNaN(v));
           const avg = vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : null;

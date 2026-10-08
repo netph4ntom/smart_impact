@@ -110,7 +110,7 @@ export default function AIAnalysisPage() {
       {/* Current sensor context */}
       <div className="card">
         <div style={{ fontWeight: 600, fontSize: '0.875rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: 8 }}><BarChart2 size={18} /> Data Sensor Saat Ini</div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '0.75rem' }}>
+        <div className="grid-adaptive">
           {[
             { key: 'temperature', label: 'Temperature', unit: '°C', icon: <Thermometer size={14} /> },
             { key: 'ph', label: 'pH', unit: '', icon: <Beaker size={14} /> },

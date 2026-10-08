@@ -19,7 +19,7 @@ export default function TrendAnalysisPage() {
   return (
     <div className="fade-up">
       {/* Trend cards */}
-      <div className="grid-4 stagger" style={{ marginBottom: '1.5rem' }}>
+      <div className="grid-adaptive stagger" style={{ marginBottom: '1.5rem' }}>
         {PARAMS.map(p => {
           const t = THRESHOLDS[p];
           const trend = trends[p] || {};

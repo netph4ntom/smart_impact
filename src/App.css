@@ -577,6 +577,8 @@
 .chart-container {
   width: 100%;
   overflow: hidden;
+  min-width: 0;
+  min-height: 0;
 }
 
 .chart-tabs {
@@ -620,6 +622,28 @@
   background: rgba(14, 165, 233, 0.15);
   color: var(--primary);
   border-color: rgba(14, 165, 233, 0.3);
+}
+
+/* ── Monitor ─────────────────────────────────────── */
+.monitor-card {
+  padding: 1.5rem 1rem;
+}
+
+.monitor-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+@media (max-width: 480px) {
+  .monitor-card {
+    padding: 1rem 0.5rem;
+  }
+  .monitor-value {
+    font-size: 1.8rem;
+  }
 }
 
 /* ── Login ───────────────────────────────────────── */
