@@ -63,7 +63,7 @@ export default function DashboardPage({ onNavigate }) {
       </div>
 
       {/* Quality + Alerts row */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', marginBottom: '1.25rem' }}>
+      <div className="dashboard-row-1">
         <WaterQualityBadge />
 
         {/* Recent Alerts */}
@@ -92,7 +92,7 @@ export default function DashboardPage({ onNavigate }) {
       </div>
 
       {/* Chart + System Status row */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr', gap: '1.25rem' }}>
+      <div className="dashboard-row-2">
         {/* Chart */}
         <div className="card">
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem', flexWrap: 'wrap', gap: 8 }}>
@@ -162,15 +162,15 @@ export default function DashboardPage({ onNavigate }) {
 
       {/* Quick Links for Analytics (Especially useful for Mobile) */}
       <div className="grid-3 stagger" style={{ marginTop: '1.25rem' }}>
-        <div className="card" style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.25rem' }} onClick={() => onNavigate('water')}>
+        <div className="card" style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '1rem' }} onClick={() => onNavigate('water')}>
           <div className="sensor-icon turb"><Droplets size={24} /></div>
           <div><div style={{ fontWeight: 600 }}>Water Quality</div><div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Historical Data</div></div>
         </div>
-        <div className="card" style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.25rem' }} onClick={() => onNavigate('ai')}>
+        <div className="card" style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '1rem' }} onClick={() => onNavigate('ai')}>
           <div className="sensor-icon" style={{ background: 'rgba(14,165,233,0.15)', color: 'var(--primary)' }}><BrainCircuit size={24} /></div>
           <div><div style={{ fontWeight: 600 }}>AI Analysis</div><div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Smart Insights</div></div>
         </div>
-        <div className="card" style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.25rem' }} onClick={() => onNavigate('system')}>
+        <div className="card" style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '1rem' }} onClick={() => onNavigate('system')}>
           <div className="sensor-icon" style={{ background: 'rgba(100,116,139,0.15)', color: 'var(--neutral)' }}><Cpu size={24} /></div>
           <div><div style={{ fontWeight: 600 }}>System Status</div><div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Device Health</div></div>
         </div>

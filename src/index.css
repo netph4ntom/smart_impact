@@ -317,3 +317,20 @@ input, textarea, select { font-family: inherit; }
   .grid-4 { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
   .grid-2 { grid-template-columns: 1fr; }
 }
+
+/* ── Responsive grids added for mobile ──────────────── */
+.dashboard-row-1 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem; }
+.dashboard-row-2 { display: grid; grid-template-columns: 1.6fr 1fr; gap: 1.25rem; }
+.system-status-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+
+@media (max-width: 768px) {
+  .dashboard-row-1, .dashboard-row-2, .system-status-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1rem;
+  }
+}

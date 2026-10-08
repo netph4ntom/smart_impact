@@ -14,7 +14,7 @@ export default function SystemStatusPage() {
 
   return (
     <div className="fade-up">
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }}>
+      <div className="system-status-grid">
         {/* Hardware & Connectivity */}
         <div className="card">
           <div style={{ fontWeight: 600, fontSize: '0.875rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: 8 }}>

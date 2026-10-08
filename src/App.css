@@ -405,6 +405,19 @@
   gap: 1rem;
 }
 
+.wq-status-card.compact {
+  padding: 1rem;
+  background: var(--bg-surface);
+}
+
+.wq-status-card.compact .wq-icon {
+  width: 44px;
+  height: 44px;
+}
+.wq-status-card.compact .wq-label {
+  font-size: 1rem;
+}
+
 .wq-icon {
   width: 52px;
   height: 52px;
