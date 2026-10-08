@@ -54,6 +54,15 @@ function AppShell() {
     };
   }, []);
 
+  // Fix for Recharts ResponsiveContainer not calculating width correctly
+  // during/after the .fade-up CSS animation when switching pages.
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 450); // fadeUp animation duration is 0.4s
+    return () => clearTimeout(timer);
+  }, [currentPage]);
+
   if (loading) {
     return (
       <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--bg-base)' }}>
