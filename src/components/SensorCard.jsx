@@ -1,4 +1,4 @@
-import { THRESHOLDS, getStatus } from '../config/blynk.js';
+import { THRESHOLDS } from '../config/blynk.js';
 import { round } from '../utils/helpers.js';
 import { useSensor } from '../contexts/SensorContext.jsx';
 import { LineChart, Line, ResponsiveContainer, Tooltip } from 'recharts';

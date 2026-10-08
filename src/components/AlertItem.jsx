@@ -1,4 +1,4 @@
-import { formatTime, formatDateTime } from '../utils/helpers.js';
+import { formatTime } from '../utils/helpers.js';
 import { AlertTriangle, ShieldAlert, Info } from 'lucide-react';
 
 export default function AlertItem({ alert, showFull = false }) {

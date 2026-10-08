@@ -6,9 +6,9 @@ import FreshnessBar from './FreshnessBar.jsx';
 import { formatDateTime } from '../utils/helpers.js';
 import { LogOut, ChevronDown } from 'lucide-react';
 
-export default function Topbar({ currentPage, title }) {
+export default function Topbar() {
   const { user, logout } = useAuth();
-  const { sensorData, deviceStatus } = useSensor();
+  const { sensorData } = useSensor();
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const menuRef = useRef(null);
 
@@ -22,7 +22,7 @@ export default function Topbar({ currentPage, title }) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const now = sensorData.timestamp || new Date();
+  const now = sensorData.timestamp || Date.now();
 
   return (
     <header className="topbar">

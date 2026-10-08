@@ -5,7 +5,6 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine,
 } from 'recharts';
 import { formatChartTime } from '../utils/helpers.js';
-import { ClipboardList, LineChart as LineChartIcon } from 'lucide-react';
 
 const PARAMS = ['temperature', 'ph', 'turbidity', 'tds'];
 const COLORS = { temperature: '#ef7444', ph: '#0ea5e9', turbidity: '#8b5cf6', tds: '#06d6a0' };

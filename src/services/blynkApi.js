@@ -7,31 +7,7 @@
 
 import { BLYNK_CONFIG } from '../config/blynk.js';
 
-const BASE = BLYNK_CONFIG.server;
-const TOKEN = BLYNK_CONFIG.token;
 
-/**
- * Generic fetch wrapper with timeout + error handling.
- */
-async function blynkFetch(url, timeoutMs = 8000) {
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), timeoutMs);
-  try {
-    const res = await fetch(url, { signal: controller.signal });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const text = await res.text();
-    try {
-      return JSON.parse(text);
-    } catch {
-      return text;
-    }
-  } catch (err) {
-    if (err.name === 'AbortError') throw new Error('Request timed out');
-    throw err;
-  } finally {
-    clearTimeout(timer);
-  }
-}
 
 // --- DUMMY DATA GENERATOR ---
 let mockState = {

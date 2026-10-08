@@ -6,7 +6,7 @@ import AlertItem from '../components/AlertItem.jsx';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine } from 'recharts';
 import { formatChartTime, round } from '../utils/helpers.js';
 import { THRESHOLDS } from '../config/blynk.js';
-import { CheckCircle, AlertTriangle, Droplets, BrainCircuit, Cpu } from 'lucide-react';
+import { CheckCircle, AlertTriangle, Droplets, BrainCircuit, Cpu, Activity } from 'lucide-react';
 
 const PARAMS   = ['temperature', 'ph', 'turbidity', 'tds'];
 const PERIODS  = ['1H', '6H', '24H', '7D'];
@@ -34,7 +34,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 };
 
 export default function DashboardPage({ onNavigate }) {
-  const { sensorData, history, alerts, loadingState, refetch } = useSensor();
+  const { history, alerts, loadingState, refetch } = useSensor();
   const [chartPeriod, setChartPeriod] = useState('1H');
   const [chartParam, setChartParam] = useState('temperature');
 
@@ -181,8 +181,6 @@ export default function DashboardPage({ onNavigate }) {
 
 function SystemStatusMini() {
   const { deviceStatus, sensorData, loadingState } = useSensor();
-  const allSensorsOk = sensorData.temperature !== null && sensorData.ph !== null
-    && sensorData.turbidity !== null && sensorData.tds !== null;
   const activeSensors = [sensorData.temperature, sensorData.ph, sensorData.turbidity, sensorData.tds]
     .filter(v => v !== null).length;
 

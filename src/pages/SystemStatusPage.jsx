@@ -4,7 +4,7 @@ import { timeAgo } from '../utils/helpers.js';
 import { Cable, Info, Activity, Settings2, RefreshCw } from 'lucide-react';
 
 export default function SystemStatusPage() {
-  const { sensorData, deviceStatus, loadingState, statuses, refetch } = useSensor();
+  const { sensorData, deviceStatus, loadingState, refetch } = useSensor();
 
   const activeSensors = ['temperature', 'ph', 'turbidity', 'tds']
     .filter(k => sensorData[k] !== null).length;

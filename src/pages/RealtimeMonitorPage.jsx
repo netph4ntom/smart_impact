@@ -1,6 +1,6 @@
 import { useSensor } from '../contexts/SensorContext.jsx';
 import { THRESHOLDS } from '../config/blynk.js';
-import { round, formatDateTime, formatTime } from '../utils/helpers.js';
+import { round, formatTime } from '../utils/helpers.js';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { formatChartTime } from '../utils/helpers.js';
 

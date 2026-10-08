@@ -6,7 +6,7 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
   ResponsiveContainer, ReferenceLine, Legend,
 } from 'recharts';
-import { Download, BarChart2, Info } from 'lucide-react';
+import { Download, BarChart2 } from 'lucide-react';
 
 const PARAMS  = ['temperature', 'ph', 'turbidity', 'tds'];
 const PERIODS = ['1H', '6H', '24H', '7D'];

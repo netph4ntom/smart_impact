@@ -1,11 +1,8 @@
-import { useAuth } from '../contexts/AuthContext.jsx';
 import { useSensor } from '../contexts/SensorContext.jsx';
-import NotificationPanel from './NotificationPanel.jsx';
-import FreshnessBar from './FreshnessBar.jsx';
-import { formatDateTime } from '../utils/helpers.js';
-import { 
+
+import {
   LayoutDashboard, Activity, Droplets, TrendingUp, 
-  AlertTriangle, BrainCircuit, Cpu, Settings, LogOut, Waves,
+  AlertTriangle, BrainCircuit, Cpu, Waves,
   ChevronLeft, ChevronRight
 } from 'lucide-react';
 
@@ -20,8 +17,7 @@ const NAV_ITEMS = [
 ];
 
 export default function Sidebar({ currentPage, onNavigate, isCollapsed, onToggleCollapse }) {
-  const { user, logout } = useAuth();
-  const { alerts, deviceStatus } = useSensor();
+  const { alerts } = useSensor();
 
   return (
     <aside className="sidebar">

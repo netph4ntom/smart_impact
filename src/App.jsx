@@ -95,7 +95,7 @@ function AppShell() {
              Kamu sedang offline. Data mungkin tidak diperbarui.
           </div>
         )}
-        <Topbar currentPage={currentPage} title={PAGE_TITLES[currentPage]} />
+        <Topbar />
         <main className="page-content" role="main">
           <div className="page-header" style={{ marginBottom: '2rem' }}>
             <div>

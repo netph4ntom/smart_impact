@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useSensor } from '../contexts/SensorContext.jsx';
 import { runAIAnalysis } from '../services/aiService.js';
 import { overallQuality } from '../utils/helpers.js';
-import { Bot, Search, BarChart2, Info, AlertTriangle, ShieldAlert, Thermometer, Beaker, Droplets, Zap } from 'lucide-react';
+import { Bot, Search, BarChart2, AlertTriangle, ShieldAlert, Thermometer, Beaker, Droplets, Zap } from 'lucide-react';
 
 const AI_CONFIGURED = !!(import.meta.env.VITE_AI_API_KEY);
 
@@ -11,7 +11,7 @@ export default function AIAnalysisPage() {
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const q = overallQuality(statuses);
+
 
   async function handleAnalyze() {
     setLoading(true);
