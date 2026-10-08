@@ -319,7 +319,7 @@ input, textarea, select { font-family: inherit; }
 /* ── Mobile bottom nav spacing ───────────────────── */
 @media (max-width: 768px) {
   .main-content { margin-left: 0; }
-  .page-content { padding: 1.25rem 1rem; padding-bottom: calc(80px + 1.25rem); }
+  .page-content { padding: calc(72px + 1.25rem) 1rem 1.25rem 1rem; padding-bottom: calc(80px + 1.25rem); }
   .page-title { font-size: 1.4rem !important; }
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .grid-3 { grid-template-columns: 1fr; }
@@ -327,7 +327,7 @@ input, textarea, select { font-family: inherit; }
 }
 
 @media (max-width: 480px) {
-  .page-content { padding: 1rem; padding-bottom: calc(80px + 1rem); }
+  .page-content { padding: calc(72px + 1rem) 1rem 1rem 1rem; padding-bottom: calc(80px + 1rem); }
   .page-title { font-size: 1.25rem !important; }
   .grid-4 { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
   .grid-2 { grid-template-columns: 1fr; }
