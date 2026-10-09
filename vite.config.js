@@ -12,8 +12,8 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,ico,png,svg}']
       },
       manifest: {
-        name: 'AQUA MONITOR',
-        short_name: 'Aqua Monitor',
+        name: 'Smart Impact',
+        short_name: 'Smart Impact',
         description: 'Smart Aquaculture Water Quality Monitoring System',
         theme_color: '#0ea5e9',
         background_color: '#0b1120',
