@@ -680,12 +680,14 @@
 
 .login-card {
   width: 100%;
-  max-width: 420px;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-md);
-  border-radius: var(--radius-xl);
-  padding: 2.5rem;
-  box-shadow: var(--shadow-lg);
+  max-width: 400px;
+  background: rgba(17, 24, 39, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 1;
 }
@@ -694,30 +696,42 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.login-logo-glow {
+  position: absolute;
+  top: 0;
+  width: 70px;
+  height: 70px;
+  background: var(--grad-primary);
+  filter: blur(24px);
+  opacity: 0.35;
+  z-index: 0;
+  border-radius: 50%;
 }
 
 .login-logo {
-  width: 60px;
-  height: 60px;
+  width: 64px;
+  height: 64px;
   background: var(--grad-primary);
-  border-radius: var(--radius-lg);
+  border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.75rem;
-  box-shadow: var(--shadow-glow);
+  box-shadow: inset 0 2px 4px rgba(255,255,255,0.2), 0 8px 16px rgba(14, 165, 233, 0.3);
+  position: relative;
+  z-index: 1;
 }
 
 .login-logo-wrap h1 {
-  font-size: 1.4rem;
+  font-size: 1.75rem;
   font-weight: 800;
-}
-
-.login-logo-wrap p {
-  font-size: 0.8rem;
-  color: var(--text-secondary);
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin: 0;
 }
 
 .login-form {
@@ -768,20 +782,24 @@
   background: rgba(239, 68, 68, 0.1);
   border: 1px solid rgba(239, 68, 68, 0.3);
   border-radius: var(--radius-md);
-  padding: 0.625rem 0.875rem;
+  padding: 0.75rem 1rem;
   font-size: 0.85rem;
   color: var(--danger);
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.login-footer-note {
-  margin-top: 1.5rem;
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  text-align: center;
-  line-height: 1.5;
+.login-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 0.875rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 12px;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 14px rgba(14, 165, 233, 0.4);
 }
 
 /* ── Trend card ──────────────────────────────────── */
@@ -1168,6 +1186,14 @@
   }
   .sparkline-wrap {
     display: none;
+  }
+  
+  .login-card {
+    padding: 2.5rem 1.5rem;
+    border-radius: 20px;
+  }
+  .login-logo-wrap h1 {
+    font-size: 1.5rem;
   }
   .sensor-trend {
     font-size: 0.65rem;
