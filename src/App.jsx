@@ -67,7 +67,7 @@ function AppShell() {
     return (
       <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--bg-base)' }}>
         <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
-          <div className="login-logo" style={{ width: 56, height: 56, background: 'transparent', boxShadow: 'none' }}>
+          <div className="login-logo" style={{ width: 90, height: 90, background: 'transparent', boxShadow: 'none' }}>
             <img src="/icons/logo.png" alt="Smart Impact Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
           </div>
           <div className="spinner" />
