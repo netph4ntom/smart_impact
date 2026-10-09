@@ -67,9 +67,13 @@ function AppShell() {
     return (
       <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--bg-base)' }}>
         <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
-          <div className="login-logo" style={{ width: 56, height: 56, fontSize: '1.6rem' }}></div>
+          <div className="login-logo" style={{ width: 56, height: 56 }}>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+            </svg>
+          </div>
           <div className="spinner" />
-          <span style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>AQUA MONITOR</span>
+          <span style={{ color: 'var(--text-muted)', fontSize: '0.875rem', fontWeight: 600 }}>Smart Impact</span>
         </div>
       </div>
     );
