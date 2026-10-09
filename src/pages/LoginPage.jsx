@@ -30,9 +30,7 @@ export default function LoginPage() {
         <div className="login-logo-wrap">
           <div className="login-logo-glow" />
           <div className="login-logo">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-            </svg>
+            <img src="/icons/logo.png" alt="Smart Impact Logo" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: 'inherit' }} />
           </div>
           <h1>Smart Impact</h1>
         </div>

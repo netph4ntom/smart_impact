@@ -23,8 +23,8 @@ export default function Sidebar({ currentPage, onNavigate, isCollapsed, onToggle
     <aside className="sidebar">
       {/* Brand */}
       <div className="sidebar-brand" style={{ height: '72px', boxSizing: 'border-box', padding: isCollapsed ? '0 0.5rem' : '0 1.25rem', justifyContent: isCollapsed ? 'center' : 'flex-start' }}>
-        <div className="sidebar-logo">
-          <Waves size={20} color="#fff" strokeWidth={2.5} />
+        <div className="sidebar-logo" style={{ background: 'transparent', boxShadow: 'none' }}>
+          <img src="/icons/logo.png" alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
         </div>
         {!isCollapsed && (
           <div className="sidebar-brand-text">
